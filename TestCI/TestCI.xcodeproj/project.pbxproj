@@ -15,6 +15,7 @@
 		F7073CD01C43AD8D00246DC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7073CCE1C43AD8D00246DC2 /* LaunchScreen.storyboard */; };
 		F7073CDB1C43AD8D00246DC2 /* TestCITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7073CDA1C43AD8D00246DC2 /* TestCITests.m */; };
 		F7073CE61C43AE0100246DC2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7073CE51C43AE0000246DC2 /* Default-568h@2x.png */; };
+		F7977C381C50914F005F0E18 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = F7977C371C50914F005F0E18 /* Model.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		F7073CDA1C43AD8D00246DC2 /* TestCITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCITests.m; sourceTree = "<group>"; };
 		F7073CDC1C43AD8D00246DC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7073CE51C43AE0000246DC2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F7977C361C50914F005F0E18 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		F7977C371C50914F005F0E18 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +90,8 @@
 				F7073CC41C43AD8D00246DC2 /* AppDelegate.m */,
 				F7073CC61C43AD8D00246DC2 /* ViewController.h */,
 				F7073CC71C43AD8D00246DC2 /* ViewController.m */,
+				F7977C361C50914F005F0E18 /* Model.h */,
+				F7977C371C50914F005F0E18 /* Model.m */,
 				F7073CE51C43AE0000246DC2 /* Default-568h@2x.png */,
 				F7073CC91C43AD8D00246DC2 /* Main.storyboard */,
 				F7073CCC1C43AD8D00246DC2 /* Assets.xcassets */,
@@ -218,6 +223,7 @@
 				F7073CC81C43AD8D00246DC2 /* ViewController.m in Sources */,
 				F7073CC51C43AD8D00246DC2 /* AppDelegate.m in Sources */,
 				F7073CC21C43AD8D00246DC2 /* main.m in Sources */,
+				F7977C381C50914F005F0E18 /* Model.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +418,7 @@
 				F7073CE11C43AD8D00246DC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F7073CE21C43AD8D00246DC2 /* Build configuration list for PBXNativeTarget "TestCITests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +427,7 @@
 				F7073CE41C43AD8D00246DC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
