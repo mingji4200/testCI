@@ -7,7 +7,6 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "Model.h"
 
 @interface TestCITests : XCTestCase
 
@@ -29,12 +28,6 @@
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 }
-
-- (void)testGetName
-{
-    XCTAssertTrue([[Model getName] isEqualToString:@"smilezoo"] , @"must be smilezoo");
-}
-
 
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
