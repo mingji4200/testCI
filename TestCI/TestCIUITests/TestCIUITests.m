@@ -32,44 +32,39 @@
     [super tearDown];
 }
 
-- (void)testTapSecondVCWhenSwitchIsOffWillShowAlert
-{
-    XCUIApplication *app = [[XCUIApplication alloc] init];
-    [app.navigationBars[@"FirstViewController"].staticTexts[@"FirstViewController"] tap];
-    [app.buttons[@"SecondVC"] tap];
-    
-    XCUIElement *warningAlert = app.alerts[@"warning"];
-    [warningAlert.staticTexts[@"turn on the switch to push the next view controller"] tap];
-    [warningAlert.collectionViews.buttons[@"取消"] tap];
-}
-
-- (void)testTapSecondVCWhenSwitchIsOnWillPushSecondVC
+// Xcode7.2 bug,写多个testcase会有无法启动app而使测试失败的情况.已经确定在7.3修复,暂时只写一个包含所有动作的testcase.
+- (void)testAll
 {
     XCUIApplication *app = [[XCUIApplication alloc] init];
     XCUIElement *firstviewcontrollerStaticText = app.navigationBars[@"FirstViewController"].staticTexts[@"FirstViewController"];
     [firstviewcontrollerStaticText tap];
+    
+    XCUIElement *secondvcButton = app.buttons[@"SecondVC"];
+    [secondvcButton tap];
+    
+    XCUIElement *warningAlert = app.alerts[@"warning"];
+    [warningAlert.staticTexts[@"warning"] tap];
+    [warningAlert.staticTexts[@"turn on the switch to push the next view controller"] tap];
+    [warningAlert.collectionViews.buttons[@"取消"] tap];
     [app.switches[@"0"] tap];
-    [app.buttons[@"SecondVC"] tap];
+    [secondvcButton tap];
     
     XCUIElement *secondviewcontrollerNavigationBar = app.navigationBars[@"SecondViewController"];
     [secondviewcontrollerNavigationBar.staticTexts[@"SecondViewController"] tap];
-    [[[[secondviewcontrollerNavigationBar childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0] tap];
+    
+    XCUIElement *backButton = [[[secondviewcontrollerNavigationBar childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0];
+    [backButton tap];
     [firstviewcontrollerStaticText tap];
-}
-
-- (void)testTapLabelInSecondVCTheNumberWillIncrease
-{
-    XCUIApplication *app = [[XCUIApplication alloc] init];
-    [app.navigationBars[@"FirstViewController"].staticTexts[@"FirstViewController"] tap];
-    [app.switches[@"0"] tap];
-    [app.buttons[@"SecondVC"] tap];
-    [app.navigationBars[@"SecondViewController"].staticTexts[@"SecondViewController"] tap];
+    [secondvcButton tap];
     [app.staticTexts[@"0"] tap];
     [app.staticTexts[@"1"] tap];
     [app.staticTexts[@"2"] tap];
     [app.staticTexts[@"3"] tap];
     [app.staticTexts[@"4"] tap];
+    [backButton tap];
 }
+
+
 
 
 
